@@ -8,7 +8,7 @@ if(isset($_GET['id']) && isset($_SESSION['corridas']) && isset($_SESSION['corrid
     $corridasArr = json_decode($_SESSION['corridasJson'], true);
 
     // Altera o status da corrida
-    $corridasArr[$idCorrida]['status'] = 'Cancelada pelo sistema';
+    $corridasArr[$idCorrida]['status'] = 'Cancelado pelo sistema';
     $_SESSION['corridas'] = $corridasArr;
     $_SESSION['corridasJson'] = json_encode($corridasArr);
 
